@@ -1,0 +1,158 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content[data-v-bfeccbf4] {
+  padding-top: var(--status-bar-height);
+}
+.top-bar[data-v-bfeccbf4] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1.875rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding-top: var(--status-bar-height);
+}
+.top-bar .top-bar-left[data-v-bfeccbf4] {
+  flex: 1;
+  margin-left: 0.78125rem;
+  margin-top: 0.375rem;
+}
+.top-bar .top-bar-left uni-image[data-v-bfeccbf4] {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 0.5rem;
+}
+.top-bar .top-bar-center[data-v-bfeccbf4] {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-bar .top-bar-center .logo[data-v-bfeccbf4] {
+  width: 2.75rem;
+  height: 1.3125rem;
+}
+.top-bar .top-bar-right[data-v-bfeccbf4] {
+  float: right;
+  padding-right: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.top-bar .top-bar-right .text[data-v-bfeccbf4] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #272832;
+  line-height: 2.75rem;
+  z-index: 1001;
+}
+.top-bar .top-bar-right .back-img[data-v-bfeccbf4] {
+  margin-top: 0.65625rem;
+  width: 0.8125rem;
+  height: 1.4375rem;
+}
+.top-bar .top-bar-right .more-img[data-v-bfeccbf4] {
+  height: 2.75rem;
+  padding-top: 0.3125rem;
+}
+.top-bar .top-bar-right .more-img uni-image[data-v-bfeccbf4] {
+  min-width: 2.1875rem;
+  min-height: 2.1875rem;
+}
+.bottom-bar[data-v-bfeccbf4] {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.8125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.common-btn-one[data-v-bfeccbf4] {
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #272832;
+  height: 2.5rem;
+  border-radius: 0.3125rem;
+}
+.logo[data-v-bfeccbf4] {
+  text-align: center;
+}
+.logo uni-image[data-v-bfeccbf4] {
+  padding-top: 8rem;
+  width: 6.0625rem;
+  height: 2.875rem;
+  margin: 0 auto;
+}
+.main[data-v-bfeccbf4] {
+  padding: 1.6875rem 1.875rem 3.75rem;
+}
+.main .title[data-v-bfeccbf4] {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #272832;
+  line-height: 2.5rem;
+}
+.main .slogan[data-v-bfeccbf4] {
+  font-size: 1.25rem;
+  color: rgba(39, 40, 50, 0.6);
+  line-height: 1.75rem;
+}
+.main .inputs[data-v-bfeccbf4] {
+  padding-top: 0.25rem;
+}
+.main .inputs uni-input[data-v-bfeccbf4] {
+  padding-top: 1.25rem;
+  height: 2.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #272832;
+  line-height: 2.75rem;
+  border-bottom: 1px solid rgba(39, 40, 50, 0.1);
+}
+.main .tips[data-v-bfeccbf4] {
+  float: left;
+  font-size: 1rem;
+  color: #ff5d5b;
+  line-height: 1.75rem;
+}
+.submit[data-v-bfeccbf4] {
+  margin: 0 auto;
+  width: 16.25rem;
+  height: 3rem;
+  background: #ffe431;
+  box-shadow: 0px 1.5625rem 1rem -1.125rem rgba(255, 228, 49, 0.4);
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #272832;
+  line-height: 3rem;
+  text-align: center;
+}

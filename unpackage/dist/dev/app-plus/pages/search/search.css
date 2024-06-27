@@ -1,0 +1,186 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content[data-v-c10c040c] {
+  padding-top: var(--status-bar-height);
+}
+.top-bar[data-v-c10c040c] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1.875rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding-top: var(--status-bar-height);
+}
+.top-bar .top-bar-left[data-v-c10c040c] {
+  flex: 1;
+  margin-left: 0.78125rem;
+  margin-top: 0.375rem;
+}
+.top-bar .top-bar-left uni-image[data-v-c10c040c] {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 0.5rem;
+}
+.top-bar .top-bar-center[data-v-c10c040c] {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-bar .top-bar-center .logo[data-v-c10c040c] {
+  width: 2.75rem;
+  height: 1.3125rem;
+}
+.top-bar .top-bar-right[data-v-c10c040c] {
+  float: right;
+  padding-right: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.top-bar .top-bar-right .text[data-v-c10c040c] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #272832;
+  line-height: 2.75rem;
+  z-index: 1001;
+}
+.top-bar .top-bar-right .back-img[data-v-c10c040c] {
+  margin-top: 0.65625rem;
+  width: 0.8125rem;
+  height: 1.4375rem;
+}
+.top-bar .top-bar-right .more-img[data-v-c10c040c] {
+  height: 2.75rem;
+  padding-top: 0.3125rem;
+}
+.top-bar .top-bar-right .more-img uni-image[data-v-c10c040c] {
+  min-width: 2.1875rem;
+  min-height: 2.1875rem;
+}
+.bottom-bar[data-v-c10c040c] {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.8125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.common-btn-one[data-v-c10c040c] {
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #272832;
+  height: 2.5rem;
+  border-radius: 0.3125rem;
+}
+.top-bar[data-v-c10c040c] {
+  background-color: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(39, 40, 50, 0.1);
+}
+.top-bar .search-div[data-v-c10c040c] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.4375rem 3.6875rem 0.4375rem 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.top-bar .search-div .search[data-v-c10c040c] {
+  margin-top: 1.25rem;
+  height: 1.875rem;
+  background-color: #f3f4f6;
+  border-radius: 0.3125rem;
+  padding: 0 1.875rem 0 0.375rem;
+}
+.top-bar .search-div .search-img[data-v-c10c040c] {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: absolute;
+  right: 4.0625rem;
+  top: 2.03125rem;
+}
+.main[data-v-c10c040c] {
+  padding: 2.75rem 1rem;
+}
+.main .result[data-v-c10c040c] {
+  padding-top: 1rem;
+}
+.main .result .title[data-v-c10c040c] {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: #272832;
+  line-height: 1.875rem;
+}
+.main .result .list[data-v-c10c040c] {
+  width: 100%;
+  padding: 0.625rem 0;
+  height: 2.5rem;
+}
+.main .result .list uni-image[data-v-c10c040c] {
+  float: left;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+}
+.main .result .names[data-v-c10c040c] {
+  float: left;
+  padding-left: 1rem;
+}
+.main .result .names .name[data-v-c10c040c] {
+  font-size: 1.125rem;
+  color: #272832;
+  line-height: 1.5625rem;
+}
+.main .result .names .email[data-v-c10c040c] {
+  font-size: 0.75rem;
+  color: #272832;
+  line-height: 0.875rem;
+}
+.main .result .right-bt[data-v-c10c040c] {
+  float: right;
+  width: 3.75rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.main .result .send[data-v-c10c040c] {
+  background-color: #ffe431;
+  color: #272832;
+}
+.main .result .add[data-v-c10c040c] {
+  background-color: rgba(74, 170, 255, 0.1);
+  color: #5799ff;
+}

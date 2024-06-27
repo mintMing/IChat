@@ -1,0 +1,492 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.emoji[data-v-dd73471c] {
+  width: 100%;
+  padding: 0.5rem 0.3125rem 5.625rem 0.3125rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.emoji .emoji-line[data-v-dd73471c] {
+  display: flex;
+}
+.emoji .emoji-line .emoji-line-item[data-v-dd73471c] {
+  flex: 1;
+  text-align: center;
+  font-size: 1.625rem;
+  line-height: 2.25rem;
+}
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.submit[data-v-6a6b59dc] {
+  background-color: #f4f4f4;
+  border-top: 1px solid rgba(39, 40, 50, 0.1);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 1002;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.submit-chat[data-v-6a6b59dc] {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding: 0.4375rem 0.4375rem;
+}
+.submit-chat uni-image[data-v-6a6b59dc] {
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: 0 0.3125rem;
+  flex: auto;
+}
+.submit-chat .btn[data-v-6a6b59dc] {
+  flex: auto;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
+  max-height: 5rem;
+  margin: 0 0.3125rem;
+}
+.submit-chat .chat-send[data-v-6a6b59dc] {
+  line-height: 1.375rem;
+}
+.submit-chat .record[data-v-6a6b59dc] {
+  line-height: 1.375rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: rgba(39, 40, 50, 0.6);
+}
+.emoji[data-v-6a6b59dc] {
+  width: 100%;
+  height: 14.375rem;
+  background-color: #ecedee;
+  box-shadow: 0 -0.03125rem 0 0 rgba(0, 0, 0, 0.1);
+}
+.emoji .emoji-send[data-v-6a6b59dc] {
+  width: 8.75rem;
+  height: 3.25rem;
+  padding-top: 0.75rem;
+  background-color: rgba(236, 237, 238, 0.8);
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  bottom: env(safe-area-inset-bottom);
+}
+.emoji .emoji-send .emoji-send-bt[data-v-6a6b59dc] {
+  flex: 1;
+  margin: 0 1rem 0 0.625rem;
+  height: 2.5rem;
+  background-color: rgba(255, 228, 48, 0.5);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2.5rem;
+  border-radius: 0.375rem;
+}
+.emoji .emoji-send .emoji-send-det[data-v-6a6b59dc] {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.75rem;
+  height: 2.5rem;
+  background-color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2.5rem;
+  border-radius: 0.375rem;
+}
+.emoji .emoji-send .emoji-send-det uni-image[data-v-6a6b59dc] {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.more[data-v-6a6b59dc] {
+  width: 100%;
+  height: 13.625rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0.03125rem 0 0 rgba(0, 0, 0, 0.1);
+  bottom: env(safe-area-inset-bottom);
+  padding: 0.25rem 0.625rem;
+  box-sizing: border-box;
+}
+.more .more-list[data-v-6a6b59dc] {
+  width: 25%;
+  text-align: center;
+  float: left;
+  padding-top: 1rem;
+}
+.more .more-list uni-image[data-v-6a6b59dc] {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.75rem;
+  background-color: white;
+  border-radius: 0.75rem;
+}
+.more .more-list .more-list-title[data-v-6a6b59dc] {
+  font-size: 0.75rem;
+  color: rgba(39, 40, 50, 0.5);
+  line-height: 1.0625rem;
+}
+.voice-bg[data-v-6a6b59dc] {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+}
+.voice-bg .voice-bg-len[data-v-6a6b59dc] {
+  height: 2.625rem;
+  width: 18.75rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1.3125rem;
+  text-align: center;
+}
+.voice-bg .voice-bg-time[data-v-6a6b59dc] {
+  display: inline-block;
+  min-width: 3.75rem;
+  line-height: 2.625rem;
+  background-color: #ffe431;
+  border-radius: 1.3125rem;
+}
+.voice-bg .voice-del[data-v-6a6b59dc] {
+  position: absolute;
+  bottom: 4.625rem;
+  margin-bottom: env(safe-area-inset-bottom);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.875rem;
+}
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.content[data-v-410a3d35] {
+  padding-top: var(--status-bar-height);
+}
+.top-bar[data-v-410a3d35] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1.875rem;
+  background: rgba(255, 255, 255, 0.96);
+  padding-top: var(--status-bar-height);
+}
+.top-bar .top-bar-left[data-v-410a3d35] {
+  flex: 1;
+  margin-left: 0.78125rem;
+  margin-top: 0.375rem;
+}
+.top-bar .top-bar-left uni-image[data-v-410a3d35] {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 0.5rem;
+}
+.top-bar .top-bar-center[data-v-410a3d35] {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top-bar .top-bar-center .logo[data-v-410a3d35] {
+  width: 2.75rem;
+  height: 1.3125rem;
+}
+.top-bar .top-bar-right[data-v-410a3d35] {
+  float: right;
+  padding-right: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.top-bar .top-bar-right .text[data-v-410a3d35] {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #272832;
+  line-height: 2.75rem;
+  z-index: 1001;
+}
+.top-bar .top-bar-right .back-img[data-v-410a3d35] {
+  margin-top: 0.65625rem;
+  width: 0.8125rem;
+  height: 1.4375rem;
+}
+.top-bar .top-bar-right .more-img[data-v-410a3d35] {
+  height: 2.75rem;
+  padding-top: 0.3125rem;
+}
+.top-bar .top-bar-right .more-img uni-image[data-v-410a3d35] {
+  min-width: 2.1875rem;
+  min-height: 2.1875rem;
+}
+.bottom-bar[data-v-410a3d35] {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.8125rem;
+  padding-top: 0.3125rem;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.common-btn-one[data-v-410a3d35] {
+  text-align: center;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #272832;
+  height: 2.5rem;
+  border-radius: 0.3125rem;
+}
+body[data-v-410a3d35] {
+  height: 100%;
+}
+.content[data-v-410a3d35] {
+  height: 100%;
+  background-color: #f4f4f4;
+}
+.top-bar[data-v-410a3d35] {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid rgba(39, 40, 50, 0.1);
+}
+.top-bar .group-img[data-v-410a3d35] {
+  position: absolute;
+  bottom: 0.3125rem;
+  right: 1rem;
+  width: 2.125rem;
+  height: 2.125rem;
+}
+.top-bar .group-img uni-image[data-v-410a3d35] {
+  width: 2.125rem;
+  height: 2.125rem;
+  border-radius: 0.5rem;
+}
+.chat[data-v-410a3d35] {
+  height: 100%;
+}
+.chat .padbt[data-v-410a3d35] {
+  height: env(safe-area-inset-bottom);
+  width: 100%;
+}
+.chat .loading[data-v-410a3d35] {
+  text-align: center;
+}
+.chat .loading .loading-img[data-v-410a3d35] {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+.chat .chat-main[data-v-410a3d35] {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 3.125rem;
+  display: flex;
+  flex-direction: column;
+}
+.chat .chat-ls .chat-time[data-v-410a3d35] {
+  font-size: 0.75rem;
+  color: rgba(39, 40, 50, 0.3);
+  line-height: 1.0625rem;
+  padding: 0.625rem 0;
+  text-align: center;
+}
+.chat .chat-ls .msg-m[data-v-410a3d35] {
+  display: flex;
+  padding: 0.625rem 0;
+}
+.chat .chat-ls .msg-m .user-img[data-v-410a3d35] {
+  flex: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.625rem;
+}
+.chat .chat-ls .msg-m .message[data-v-410a3d35] {
+  flex: none;
+  max-width: 15rem;
+}
+.chat .chat-ls .msg-m .msg-text[data-v-410a3d35] {
+  font-size: 1rem;
+  color: #272832;
+  line-height: 1.375rem;
+  padding: 0.5625rem 0.75rem;
+}
+.chat .chat-ls .msg-m .msg-img[data-v-410a3d35] {
+  max-width: 12.5rem;
+  border-radius: 0.625rem;
+}
+.chat .chat-ls .msg-m .voice[data-v-410a3d35] {
+  min-width: 2.75rem;
+  max-width: 12.5rem;
+}
+.chat .chat-ls .msg-m .voice-img[data-v-410a3d35] {
+  width: 0.875rem;
+  height: 1.125rem;
+}
+.chat .chat-ls .msg-m .msg-map[data-v-410a3d35] {
+  width: 14.5rem;
+  height: 8.875rem;
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+}
+.chat .chat-ls .msg-m .msg-map .map-name[data-v-410a3d35] {
+  font-size: 1rem;
+  color: #272832;
+  line-height: 1.375rem;
+  padding: 0.5625rem 0.75rem 0 0.75rem;
+  overflow: hidden;
+}
+.chat .chat-ls .msg-m .msg-map .map-address[data-v-410a3d35] {
+  font-size: 0.75rem;
+  color: rgba(39, 40, 50, 0.4);
+  padding: 0 0.75rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.chat .chat-ls .msg-m .msg-map .map[data-v-410a3d35] {
+  width: 14.5rem;
+  height: 5.625rem;
+  padding-top: 0.3125rem;
+  position: absolute;
+  z-index: 0;
+}
+.chat .chat-ls .msg-m .msg-map .map-img[data-v-410a3d35] {
+  padding-top: 0.25rem;
+  width: 15rem;
+  height: 5.625rem;
+}
+.chat .chat-ls .msg-m .msg-map .map-cover-view[data-v-410a3d35] {
+  position: absolute;
+}
+.chat .chat-ls .msg-m .msg-map .cover-marker[data-v-410a3d35] {
+  width: 14.5rem;
+  height: 5.625rem;
+}
+.chat .chat-ls .msg-left[data-v-410a3d35] {
+  flex-direction: row;
+}
+.chat .chat-ls .msg-left .msg-text[data-v-410a3d35] {
+  margin-left: 0.5rem;
+  background-color: #fff;
+  border-radius: 0 0.625rem 0.625rem 0.625rem;
+}
+.chat .chat-ls .msg-left .msg-img[data-v-410a3d35] {
+  margin-left: 0.5rem;
+}
+.chat .chat-ls .msg-left .voice[data-v-410a3d35] {
+  text-align: right;
+}
+.chat .chat-ls .msg-left .voice-img[data-v-410a3d35] {
+  float: left;
+  padding-bottom: 0.3125rem;
+  width: 0.875rem;
+  height: 1.125rem;
+}
+.chat .chat-ls .msg-left .msg-map[data-v-410a3d35] {
+  margin-left: 0.5rem;
+  border-radius: 0 0.625rem 0.625rem 0.625rem;
+}
+.chat .chat-ls .msg-right[data-v-410a3d35] {
+  flex-direction: row-reverse;
+}
+.chat .chat-ls .msg-right .msg-text[data-v-410a3d35] {
+  margin-right: 0.5rem;
+  background-color: #fff260;
+  border-radius: 0.625rem 0 0.625rem 0.625rem;
+}
+.chat .chat-ls .msg-right .msg-img[data-v-410a3d35] {
+  margin-right: 0.5rem;
+}
+.chat .chat-ls .msg-right .voice[data-v-410a3d35] {
+  text-align: left;
+}
+.chat .chat-ls .msg-right .voice .voice-img[data-v-410a3d35] {
+  float: right;
+  transform: rotate(180deg);
+  width: 0.875rem;
+  height: 1.125rem;
+  padding-top: 0.125rem;
+}
+.chat .chat-ls .msg-right .msg-map[data-v-410a3d35] {
+  margin-right: 0.5rem;
+  border-radius: 0.625rem 0 0.625rem 0.625rem;
+}

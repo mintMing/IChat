@@ -1,0 +1,98 @@
+// 头部适配
+.content {
+	padding-top: var(--status-bar-height);
+}
+
+.top-bar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 60rpx;
+	background: rgba(255, 255, 255, 0.96);
+	//box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.1); 
+	padding-top: var(--status-bar-height);
+	// border: 1px solid red;
+	.top-bar-left {
+		flex: 1;
+		margin-left: 25rpx;
+		margin-top: 12rpx;
+		image {
+			width: 50rpx;
+			height: 50rpx;
+			border-radius: 16rpx;
+		}
+	}
+	.top-bar-center {
+		flex: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.logo {
+			width: 88rpx;
+			height: 42rpx;	
+		}
+	}
+	.top-bar-right {
+		float: right;
+		padding-right: 32rpx;
+		flex: 1;
+		display: flex;
+		flex-direction: row-reverse;
+		.text {
+			font-size: $uni-font-size-lg;
+			font-weight: 500;
+			color: $uni-text-color;
+			line-height: 88rpx;
+			z-index: 1001;
+		}
+		.back-img {
+			margin-top: 21rpx;
+			width: 26rpx;
+			height: 46rpx;
+		}
+		.more-img {
+			// border: 1px solid red;
+			height: 88rpx;
+			padding-top: 10rpx;
+			// padding-right: $uni-spacing-col-base;
+			image {
+				// border: 1px solid red;
+				min-width: 70rpx;
+				min-height: 70rpx;
+			}
+		}
+	}
+}
+// 底部样式
+.bottom-bar {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 90rpx;
+	// box-sizing: border-box;
+	padding-top: 10rpx;
+	padding-bottom: env(safe-area-inset-bottom);
+	// .bottom-btn {
+	// 	text-align: center;
+	// 	line-height: 80rpx;
+	// 	font-size: $uni-font-size-lg;
+	// 	color: $uni-text-color;
+	// 	height: 80rpx;
+	// 	background-color: $uni-color-primary;
+	// 	border-radius: $uni-border-radius-sm;
+	// }
+}
+
+.common-btn-one {
+	text-align: center;
+	line-height: 80rpx;
+	font-size: $uni-font-size-lg;
+	color: $uni-text-color;
+	height: 80rpx;
+	border-radius: $uni-border-radius-sm;
+}
