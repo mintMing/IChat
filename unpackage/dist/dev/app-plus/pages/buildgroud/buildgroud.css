@@ -384,8 +384,8 @@
   padding-top: 0.3125rem;
 }
 .top-bar .top-bar-right .more-img uni-image[data-v-9be8533e] {
-  min-width: 2.1875rem;
-  min-height: 2.1875rem;
+  max-width: 2.1875rem;
+  max-height: 2.1875rem;
 }
 .bottom-bar[data-v-9be8533e] {
   position: fixed;

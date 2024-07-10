@@ -13,101 +13,57 @@
 			<view class="slogan">您好，欢迎来到 mint!</view>
 			<view class="inputs">
 				<input class="user" type="text" placeholder="用户名/邮箱" placeholder-style="color:#aaa;font-weight:400;" v-model="user" />
-				<input class="psw" type="password" placeholder="密码" placeholder-style="color:#aaa;font-weight:400;" />
+				<input class="psw" type="password" placeholder="密码" placeholder-style="color:#aaa;font-weight:400;" v-model="pwd" />
 			</view>
-			<view class="tips">输入用户或密码错误！</view>
+			<view class="tips" v-show="isRight">输入用户或密码错误！</view>
 		</view>
-		<view class="submit" @tap="test">登录</view>
+		<view class="submit" @tap="login">登录</view>
 	</view>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
+import { onLoad } from "@dcloudio/uni-app";
+import { logon } from "../../util/axios/requests";
+import useUserStore from "../../stores/user";
+import setCookie from "../../util/cookie.js"
 
-let user = ref("");
-let password = ref("");
+const user = ref("");
+const pwd = ref("");
+const isRight = ref(false);
 
-const test = ()=> {
-	// uni.request({
-	// 	url: "http://192.168.95.185:3000/test",
-	// 	data: {
+const userStore = useUserStore();
+
+// 注册用户字段
+onLoad((e)=> {
+	user.value = e.user;
+});
+
+// const isRight = computed({
+// 	get() {
+// 		return (user.value || pwd.value);
+// 	}
+// });
+
+const login = async ()=> {
+	if(user.value.length > 0 && pwd.value.length > 0) {
+		
+		const result = await logon(user.value, pwd.value);
+		
+		if (result.status === 200) {
+			const { accessToken, id, name, imgurl } = result.data.data;
+			localStorage.setItem("userInfo", JSON.stringify({ accessToken, id, name, imgurl }));
 			
-	// 	},
-	// 	method: "GET",
-	// 	success: (data)=> {
-	// 		console.log(data);
-	// 	}
-	// });
-	// uni.request({
-	// 	url: "http://192.168.95.185:3000/mail",
-	// 	data: {
-	// 		 mail: user.value,
-	// 	},
-	// 	method: "POST",
-	// 	header: {
-	// 		"Content-Type": "application/json",
-	// 	},
-	// 	success: (data)=> {
-	// 		console.log(data);
-	// 	},
-	// 	fail: (data)=> {
-	// 		console.log("fail:"+data)
-	// 	}
-	// });
-	// 注册测试
-	// uni.request({
-	// 	url: "http://192.168.50.185:3000/signup/add",
-	// 	data: {
-	// 		 email: "2570803883@qq.com",
-	// 		 name: "mint",
-	// 		 pwd: "123",
-	// 	},
-	// 	method: "POST",
-	// 	header: {
-	// 		"Content-Type": "application/json",
-	// 	},
-	// 	success: (data)=> {
-	// 		console.log(data);
-	// 	},
-	// 	fail: (data)=> {
-	// 		console.log("fail:"+data)
-	// 	}
-	// });
-	// 登录测试
-	// uni.request({
-	// 	url: "http://192.168.50.185:3000/signin/match",
-	// 	data: {
-	// 		 data: "mint",
-	// 		 pwd: "123",
-	// 	},
-	// 	method: "POST",
-	// 	header: {
-	// 		"Content-Type": "application/json",
-	// 	},
-	// 	success: (data)=> {
-	// 		console.log(data);
-	// 	},
-	// 	fail: (data)=> {
-	// 		console.log("fail:"+data)
-	// 	}
-	// });
-	// 搜索测试
-	uni.request({
-		url: "http://192.168.50.185:3000/search/user",
-		data: {
-			 data: "m"
-		},
-		method: "POST",
-		header: {
-			"Content-Type": "application/json",
-		},
-		success: (data)=> {
-			console.log(data);
-		},
-		fail: (data)=> {
-			console.log("fail:"+data)
-		}
-	});
+			uni.navigateTo({
+				url: "../index/index",
+			});
+		} else if (result.status === 400) {  
+			alert("Password mismatch");  
+			isRight.value = true;  
+		} else {  
+			alert("Login failed");  
+		}  
+	}
 }
 
 </script>

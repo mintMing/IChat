@@ -6,13 +6,13 @@
 			</view>
 			<view class="top-bar-right">
 				<view class="more-img">
-					<image src="../../static/images/userhome/more.png"></image>
+					<image src="../../static/images/userhome/more.png" mode="aspectFill"></image>
 				</view>
 			</view>
 		</view>
 		<view class="bg">
 			<view class="bg-bai" :animation="aniBgData"></view>
-			<image class="bg-img" src="../../static/images/img/OIP1.jpg" mode="aspectFill"></image>
+			<image class="bg-img" :src="user.imgurl" mode="aspectFill"></image>
 		</view>
 		<view class="main"> 
 			<view class="user-header">
@@ -21,7 +21,7 @@
 						<image src="../../static/images/userhome/nv.png"></image>
 					</view>
 				</transition>
-				<image :class="['user-img', { 'user-img-alt': isAltStyle }]" src="../../static/images/img/OIP1.jpg" mode="aspectFill"></image>
+				<image :class="['user-img', { 'user-img-alt': isAltStyle }]" :src="user.imgurl" mode="aspectFill"></image>
 			</view>
 			<view class="user-info">
 				<view class="name">{{ user.name }}</view>
@@ -47,15 +47,28 @@
 
 <script setup>
 import { backBefore, createAni } from "../../commons/js/tool.js";
-import { onReady  } from '@dcloudio/uni-app';
+import { onLoad  } from '@dcloudio/uni-app';
 import { ref, reactive, computed, getCurrentInstance } from "vue";
+import { userInfo } from "../../util/axios/requests.js";
 
 const sexBg = ref("rgba(255, 93, 91, 1)");
 
+/**
+ * 当前用户id和令牌
+ * 具体用户信息
+ */
+const basicUserInfo = reactive({
+	userId: "",
+	token: "",
+});
+
 const user = reactive({
-	name: "神金",
-	nick: "求职狗",
-	intr: "在做了，希望能找到工作吧！唉！！！"
+	id: "", // 主页转入的id
+	name: "",
+	nick: "",
+	intr: "",
+	imgurl: "",
+	markName: "", // 名称
 });
 
 const selfName = ref("mint");
@@ -85,9 +98,6 @@ const getInfoHeight = ()=> {
 	}).exec();
 }
 
-onReady(()=> {
-	getInfoHeight();
-});
 //页面高度 
 const dynamicStyles = computed(()=> {
 	return {
@@ -119,6 +129,46 @@ const handleToggle = (type)=> {
 		showIcon.value = true;
 	}, 400);
 }
+
+/**
+ * 接收注册页面的用户名
+ * 加载用户初始数据
+ */
+onLoad((e)=> {
+	user.id = e.id;
+	const data = JSON.parse(localStorage.getItem("userInfo"));
+	if(data) {
+		basicUserInfo.userId = data.id;
+		basicUserInfo.token = data.accessToken;
+		
+	} else {
+		console.error("data is null");
+	}
+	getUserInfo();
+});
+
+const getUserInfo = async ()=> {
+	try {
+		const res = await userInfo(basicUserInfo.userId, basicUserInfo.token);
+			
+		if(res.status === 200) {
+			user.name = res.name;
+			user.imgurl = `http://192.168.60.185:3000/us/${res.imgurl}`;
+			user.intr = res.explain || "这人很蓝，什么都没写";
+			user.nick = res.markName || user.name;
+		} else {
+			console.error("User not found");
+		}
+	} catch (error) {
+		throw error;
+	}
+}
+/**
+ * 用户关系
+ * 
+ */
+
+
 </script>
 
 <style lang="scss" scoped>
@@ -127,6 +177,7 @@ const handleToggle = (type)=> {
 .top-bar {
 	background: rgba(255, 255, 255, 0.96);
 	border-bottom: 1px solid $uni-border-color;
+	
 }
 
 .bg {

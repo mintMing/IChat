@@ -1,12 +1,11 @@
 <template>
 	<view class="content">
 		<view class="top-bar">
-			<navigator url="../userhome/userhome?id=aaa" class="top-bar-left" hover-class="none">
-				<image src="../../static/images/img/OIP1.jpg"></image>
+			<navigator :url="'../userhome/userhome?id='+userId" class="top-bar-left" hover-class="none">
+				<image :src="userImgurl"></image>
 			</navigator>
 			<view class="top-bar-center">
 				<image src="../../static/images/index/火.png" class="logo"></image>
-				
 			</view>
 			<view class="top-bar-right">
 				<view class="search" @tap="toSearch">
@@ -55,13 +54,22 @@
 <script setup>
 import data from "../../commons/js/data.js";
 import { dateTime } from "../../commons/js/tool.js";
-import { reactive } from "vue";
+import { ref, reactive  } from "vue";
 import { onLoad } from "@dcloudio/uni-app";
+// import useUserStore from "../../stores/user.js";
+
 
 let friends = reactive([]);
+const userId = ref("");
+const userImgurl = ref("");
+
+const token = ref("");
+
 
 onLoad(()=> {
 	getFriends();
+	const userInfo = JSON.parse(localStorage.getItem("userInfo")); 
+	setUserDate(userInfo);
 });
 
 
@@ -82,6 +90,7 @@ const toSearch = ()=> {
 		url: "../search/search",
 	})
 }
+
 // 到新建群
 const toBuildGroup = ()=> {
 	uni.navigateTo({
@@ -89,6 +98,12 @@ const toBuildGroup = ()=> {
 	});
 }
 
+// 获取缓存数据
+const setUserDate = async (userData)=> {
+	userId.value = userData.id;
+	userImgurl.value = `http://192.168.60.185:3000/us/${userData.imgurl}`;
+	token.value = userData.token;
+}
 
 
 </script>
@@ -101,8 +116,8 @@ const toBuildGroup = ()=> {
 	border-bottom: 1px solid $uni-border-color;
 	.top-bar-right {
 		image {
-			width: 52rpx;
-			height: 52rpx;
+			width: 20rpx;
+			height: 20rpx;
 			margin-left: 25rpx;
 		}
 	}

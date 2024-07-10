@@ -75,7 +75,7 @@
       "style": "dark",
       "background": "#F8F8F8"
     },
-    "arguments": "{\"path\":\"pages/chatroom/chatroom\"}",
+    "arguments": "{\"name\":\"\",\"path\":\"pages/chatroom/chatroom\",\"query\":\"\"}",
     "uniStatistics": {
       "enable": false
     },

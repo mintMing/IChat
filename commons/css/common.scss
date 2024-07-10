@@ -62,8 +62,8 @@
 			// padding-right: $uni-spacing-col-base;
 			image {
 				// border: 1px solid red;
-				min-width: 70rpx;
-				min-height: 70rpx;
+				max-width: 70rpx;
+				max-height: 70rpx;
 			}
 		}
 	}

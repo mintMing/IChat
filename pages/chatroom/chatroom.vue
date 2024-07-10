@@ -146,6 +146,7 @@ onLoad(()=> {
 
 // 获取聊天数据
 const getMsg = (page)=> {
+	// 获取mock数据 以提供测试测试
 	let msg = data.message();
 	let maxPage = msg.length;
 	if(msg.length > (page + 1) * 10) {
@@ -244,9 +245,9 @@ const getChat = (obj)=> {
 		imgMsg.push(obj.message);
 	}
 }
+
 // 处理表情所需要的高度
 const getHeights = (height)=> {
-	// console.log(height)
 	emojiHeight.value = height;
 	goBottom();
 }
@@ -292,6 +293,7 @@ const nextPage = ()=> {
 		}, 1000);
 	}
 };
+
 // 点击查看地图
 const openLoc = (value)=> {
 	uni.openLocation({
